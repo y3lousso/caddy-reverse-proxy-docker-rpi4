@@ -1,0 +1,19 @@
+version: '2'
+services:
+  caddy:
+    image: elswork/arm-caddy
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - './Caddyfile:/etc/Caddyfile'
+      - './caddy:/root/.caddy'
+    networks:
+      - virtual-network
+
+networks:
+  virtual-network:
+    external:
+      name: virtual-network

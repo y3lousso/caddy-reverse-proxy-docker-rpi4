@@ -1,0 +1,4 @@
+yannick-loussouarn.ddns.net {
+  proxy /  portfolio_frontend:8080
+  proxy /api	portfolio_backend:8081/
+}
